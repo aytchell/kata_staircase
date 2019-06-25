@@ -1,6 +1,9 @@
 #include <iostream>
 #include <map>
 
+const unsigned int num_stairs_start = 0;
+const unsigned int num_stairs_end = 8;
+
 class StairWalker
 {
     public:
@@ -38,13 +41,6 @@ int main()
 {
     StairWalker walker;
 
-    std::cout << "numWay(0) = " << walker.numWay(0) << '\n';
-    std::cout << "numWay(1) = " << walker.numWay(1) << '\n';
-    std::cout << "numWay(2) = " << walker.numWay(2) << '\n';
-    std::cout << "numWay(3) = " << walker.numWay(3) << '\n';
-    std::cout << "numWay(4) = " << walker.numWay(4) << '\n';
-    std::cout << "numWay(5) = " << walker.numWay(5) << '\n';
-    std::cout << "numWay(6) = " << walker.numWay(6) << '\n';
-    std::cout << "numWay(7) = " << walker.numWay(7) << '\n';
-    std::cout << "numWay(8) = " << walker.numWay(8) << '\n';
+    for (unsigned int i = num_stairs_start; i <= num_stairs_end; ++i)
+        std::cout << "numWay(" << i << ") = " << walker.numWay(i) << '\n';
 }
